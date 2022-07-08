@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import "./index.css";
-import {
-  dropAllow,
-  handleDrop,
-  handleSubmit,
-  startProgress,
-} from "../../utils/logic";
+import { dropAllow, handleDrop, handleSubmit } from "../../utils/logic";
 import { PreviousSubmissions } from "../previousSubmissions";
 
 export const FileUploader = () => {

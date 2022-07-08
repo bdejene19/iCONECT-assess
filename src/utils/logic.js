@@ -15,8 +15,6 @@ export const startProgress = (timer) => {
     let allCards = document.querySelector(".submission-container").children;
     let mostRecent = allCards[allCards.length - 1];
     let bar = mostRecent.children.item(2).children.item(0).children.item(0);
-    console.log(bar);
-    console.log(bar);
     bar.style.cssText = `
             width: 100%;
             transition: ${timer}s ease-in-out width;
