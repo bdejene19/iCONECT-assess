@@ -9,5 +9,7 @@
 #progress-bar {
     width: 0%;
     height: 5vh;
+    transition: 10s linear width;
+
     background: rgb(55, 235, 55);
 }

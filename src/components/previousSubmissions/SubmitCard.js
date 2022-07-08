@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import FilePresentIcon from "@mui/icons-material/FilePresent";
 import { ProgressBar } from "../progressBar";
-import { startProgress } from "../../utils/logic";
 import "./index.css";
+import { startProgress } from "../../utils/logic";
 export const SubmitCard = (props) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(0);
   useEffect(() => {
-    startProgress(10);
+    setLoading(100);
   }, []);
   return (
-    <div className="card-wrapper" id="i">
+    <div className="card-wrapper">
       <h3 className="header">{props.name}</h3>
       <div className="body">
         <FilePresentIcon style={{ fontSize: "5rem" }} className="fileIcon" />
       </div>
       <div className="footer">
-        <ProgressBar />
+        <ProgressBar progress={loading} />
         <p>{props.fileName}</p>
       </div>
     </div>
