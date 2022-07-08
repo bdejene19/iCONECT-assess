@@ -1,0 +1,36 @@
+.upload-container {
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1em;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(35deg, white, slateblue 90%);
+    box-shadow: 0 3px 3px 3px black;
+    width: 80vw;
+}
+
+.form-wrapper button {
+    margin-left: 5em;
+    padding: 0.35em;
+}
+#upload-icon {
+    font-size: 15rem;
+    color: snow;
+}
+label {
+    /* background-color: green; */
+}
+input {
+    /* visibility: hidden;; */
+    margin-top: -2em;
+    height: 5vh;
+}
+
+input::-webkit-file-upload-button {
+    background: linear-gradient(25deg, white, silver);
+    
+    height: 100%;
+    border-radius: 50px;
+}
