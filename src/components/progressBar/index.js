@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { startProgress } from "../../utils/logic";
+import React from "react";
 import "./index.css";
 
-export const ProgressBar = (props) => {
+export const ProgressBar = () => {
   return (
     <div id="progress-wrapper">
-      <div id="progress-bar"></div>
+      <div className="progress-bar"></div>
     </div>
   );
 };

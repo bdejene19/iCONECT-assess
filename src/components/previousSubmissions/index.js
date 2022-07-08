@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { startProgress } from "../../utils/logic";
+import React from "react";
 import "./index.css";
 import { SubmitCard } from "./SubmitCard";
 

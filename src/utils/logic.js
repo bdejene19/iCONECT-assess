@@ -10,16 +10,12 @@ export const dropAllow = (event) => {
   event.preventDefault();
 };
 
-export const startProgress = (timer) => {
-  if (timer > 0) {
-    let allCards = document.querySelector(".submission-container").children;
-    let mostRecent = allCards[allCards.length - 1];
-    let bar = mostRecent.children.item(2).children.item(0).children.item(0);
-    bar.style.cssText = `
-            width: 100%;
-            transition: ${timer}s ease-in-out all;
-       `;
-  }
+export const handleUpload = (e) => {
+  let btn = e.target.parentNode;
+  let bar = btn.closest(".card-wrapper").children[1].children[1].children[0];
+  bar.style.cssText = `
+    width: 100%;
+  `;
 };
 
 export const handleSubmit = (custodian, upload) => {
