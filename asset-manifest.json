@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/iCONECT-assess/static/css/main.f39c9ca6.css",
+    "main.js": "/iCONECT-assess/static/js/main.27e62313.js",
+    "static/js/787.5968d2dd.chunk.js": "/iCONECT-assess/static/js/787.5968d2dd.chunk.js",
+    "index.html": "/iCONECT-assess/index.html",
+    "main.f39c9ca6.css.map": "/iCONECT-assess/static/css/main.f39c9ca6.css.map",
+    "main.27e62313.js.map": "/iCONECT-assess/static/js/main.27e62313.js.map",
+    "787.5968d2dd.chunk.js.map": "/iCONECT-assess/static/js/787.5968d2dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f39c9ca6.css",
+    "static/js/main.27e62313.js"
+  ]
+}
