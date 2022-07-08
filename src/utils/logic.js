@@ -17,7 +17,7 @@ export const startProgress = (timer) => {
     let bar = mostRecent.children.item(2).children.item(0).children.item(0);
     bar.style.cssText = `
             width: 100%;
-            transition: ${timer}s ease-in-out width;
+            transition: ${timer}s ease-in-out all;
        `;
   }
 };

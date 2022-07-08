@@ -4,7 +4,8 @@ import "./index.css";
 import { SubmitCard } from "./SubmitCard";
 
 export const PreviousSubmissions = (props) => {
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
+
   return (
     <section className="submission-container">
       {props.uploaded?.map((upload, index) => (
