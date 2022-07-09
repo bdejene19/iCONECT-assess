@@ -10,7 +10,7 @@ export const dropAllow = (event) => {
   event.preventDefault();
 };
 
-export const startProgress = (timer) => {
+export const startProgress = (timer, width) => {
   if (timer > 0) {
     let allCards = document.querySelector(".submission-container").children;
     let mostRecent = allCards[allCards.length - 1];
