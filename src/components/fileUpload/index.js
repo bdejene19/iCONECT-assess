@@ -5,39 +5,28 @@ import { dropAllow, handleDrop, handleSubmit } from "../../utils/logic";
 import { PreviousSubmissions } from "../previousSubmissions";
 
 export const FileUploader = () => {
+  // create state for file that is currently value of file input element
   const [upload, setUpload] = useState("");
+
+  // state to handle all previous file submissions
   const [submissions, setSubmissions] = useState([]);
-  const [custodian, setCustodian] = useState("");
-  const [formSubmit, setSubmit] = useState(0);
 
   useEffect(() => {
-    if (formSubmit) {
-      let newFile = handleSubmit(custodian, upload);
-      setSubmissions([...submissions, newFile]);
-      setCustodian("");
-      setUpload("");
-      setSubmit(false);
+    // check to see if file input element is empty - if not, return new javascript object
+    // update total submissions and push newly created javascript object to array
+    if (upload !== "") {
+      let newFile = handleSubmit(upload);
+      if (newFile) {
+        setSubmissions([...submissions, newFile]);
+      }
     }
-  }, [formSubmit]);
+  }, [upload]);
 
   return (
     <main>
-      {upload !== "" ? (
-        <div className="form-wrapper">
-          <label htmlFor="custodian-name">Enter Custodian Name: </label>
-          <input
-            type="text"
-            id="custodian-name"
-            placeholder="Bemnet Dejene"
-            onChange={(e) => setCustodian(e.target.value)}
-            value={custodian}
-          ></input>
-          <button id="submit-btn" onClick={() => setSubmit(true)}>
-            Submit
-          </button>
-        </div>
-      ) : null}
-
+      {/* input file UI:
+          - onChange => handle value of file input
+          - onDrop/onDragOver => handle drag/drop file  functionality */}
       <section className="upload-container">
         <CloudUploadIcon id="upload-icon" />
         <input
@@ -50,6 +39,7 @@ export const FileUploader = () => {
         ></input>
       </section>
 
+      {/* container for file uploads => uploaded prop takeks in array submissions */}
       <PreviousSubmissions uploaded={submissions}></PreviousSubmissions>
     </main>
   );
