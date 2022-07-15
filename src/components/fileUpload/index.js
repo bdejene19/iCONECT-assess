@@ -22,17 +22,23 @@ export const FileUploader = () => {
     }
   }, [upload]);
 
+  useEffect(() => {
+    if (upload !== "") {
+      setUpload("");
+    }
+  }, [document.getElementById("upload-title")]);
   return (
     <main>
       {/* input file UI:
           - onChange => handle value of file input
           - onDrop/onDragOver => handle drag/drop file  functionality */}
       <label htmlFor="fileInput" className="upload-container">
+        <h3 id="upload-title">{upload}</h3>
         <CloudUploadIcon id="upload-icon" />
         <input
           type="file"
           id="fileInput"
-          value={upload}
+          // value={upload}
           onChange={(e) => setUpload(e.target.value)}
           onDrop={(e) => handleDrop(e)}
           onDragOver={(e) => dropAllow(e)}
