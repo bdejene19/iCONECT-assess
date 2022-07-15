@@ -27,7 +27,7 @@ export const FileUploader = () => {
       {/* input file UI:
           - onChange => handle value of file input
           - onDrop/onDragOver => handle drag/drop file  functionality */}
-      <section className="upload-container">
+      <label htmlFor="fileInput" className="upload-container">
         <CloudUploadIcon id="upload-icon" />
         <input
           type="file"
@@ -37,7 +37,7 @@ export const FileUploader = () => {
           onDrop={(e) => handleDrop(e)}
           onDragOver={(e) => dropAllow(e)}
         ></input>
-      </section>
+      </label>
 
       {/* container for file uploads => uploaded prop takeks in array submissions */}
       <PreviousSubmissions uploaded={submissions}></PreviousSubmissions>
