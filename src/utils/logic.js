@@ -19,6 +19,7 @@ export const dropAllow = (event) => {
 // validates to see of upload card has custodian name
 export const handleUpload = (e) => {
   // retrieving elements
+  let inputFileName = document.getElementById("fileInput");
   let btn = e.target.parentNode;
   let card = btn.closest(".card-wrapper");
   let custodianName = card.children[0].children[0].lastChild;
@@ -32,6 +33,9 @@ export const handleUpload = (e) => {
 
     return false;
   }
+
+  // reset input file value to empty string on upload
+  inputFileName.value = "";
 
   // handle progress bar animation
   let bar = card.children[1].children[1].children[0];
