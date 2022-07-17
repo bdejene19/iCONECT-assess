@@ -22,11 +22,6 @@ export const FileUploader = () => {
     }
   }, [upload]);
 
-  useEffect(() => {
-    if (upload !== "") {
-      setUpload("");
-    }
-  }, [document.getElementById("upload-title")]);
   return (
     <main>
       {/* input file UI:
