@@ -33,7 +33,7 @@ label {
 }
 
 input[type='text'] {
-    padding: 0.25em;
+    padding: 0.5em;
 }
 
 input::-webkit-file-upload-button {
